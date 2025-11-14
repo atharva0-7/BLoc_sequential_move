@@ -1,24 +1,11 @@
 import 'dart:math';
+import 'package:example_folder/bloc/event/position_event.dart';
+import 'package:example_folder/bloc/state/position_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-// Events
-abstract class PositionsEvent {}
-
-class GenerateNewPositions extends PositionsEvent {
-  final Size bounds;
-  final double itemSize;
-  GenerateNewPositions({
-    required this.bounds,
-    required this.itemSize,
-  });
-}
 
 // State
-class PositionsState {
-  final List<Offset> positions;
-  const PositionsState({required this.positions});
-}
 
 // BLoC
 class PositionsBloc extends Bloc<PositionsEvent, PositionsState> {
